@@ -1,81 +1,85 @@
 {
-  "$schema": "https://mintlify.com/schema.json",
-  "name": "Cronos Army",
+  "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
-  "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
-  },
-  "favicon": "/favicon.svg",
+  "name": "Cronos Army",
   "colors": {
     "primary": "#dc2626",
     "light": "#ef4444",
-    "dark": "#b91c1c",
-    "anchors": {
-      "from": "#dc2626",
-      "to": "#f97316"
+    "dark": "#b91c1c"
+  },
+  "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Docs",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "introduction",
+              "getting-started/claim-soldiers",
+              "getting-started/connect-wallet",
+              "getting-started/first-battle"
+            ]
+          },
+          {
+            "group": "Gameplay",
+            "pages": [
+              "gameplay/territories",
+              "gameplay/battle-system",
+              "gameplay/soldier-personalities",
+              "gameplay/energy"
+            ]
+          },
+          {
+            "group": "Your Army",
+            "pages": [
+              "army/soldiers",
+              "army/rarity-stats",
+              "army/ai-memory"
+            ]
+          },
+          {
+            "group": "Economy",
+            "pages": [
+              "economy/credits",
+              "economy/wpp",
+              "economy/rewards"
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Play Now",
+          "href": "https://cronosarmy.com",
+          "icon": "gamepad"
+        },
+        {
+          "anchor": "Discord",
+          "href": "https://discord.gg/cronosarmy",
+          "icon": "discord"
+        }
+      ]
     }
   },
-  "topbarLinks": [
-    {
-      "name": "Play Now",
-      "url": "https://cronosarmy.com"
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "Launch Game",
+      "href": "https://cronosarmy.com/command-center"
     }
-  ],
-  "topbarCtaButton": {
-    "name": "Launch Game",
-    "url": "https://cronosarmy.com/command-center"
   },
-  "anchors": [
-    {
-      "name": "Discord",
-      "icon": "discord",
-      "url": "https://discord.gg/cronosarmy"
-    },
-    {
-      "name": "Twitter",
-      "icon": "x-twitter",
-      "url": "https://twitter.com/ben__crypto23"
+  "footer": {
+    "socials": {
+      "x": "https://x.com/ben__crypto23",
+      "discord": "https://discord.gg/cronosarmy"
     }
-  ],
-  "navigation": [
-    {
-      "group": "Getting Started",
-      "pages": [
-        "introduction",
-        "getting-started/claim-soldiers",
-        "getting-started/connect-wallet",
-        "getting-started/first-battle"
-      ]
-    },
-    {
-      "group": "Gameplay",
-      "pages": [
-        "gameplay/territories",
-        "gameplay/battle-system",
-        "gameplay/soldier-personalities",
-        "gameplay/energy"
-      ]
-    },
-    {
-      "group": "Your Army",
-      "pages": [
-        "army/soldiers",
-        "army/rarity-stats",
-        "army/ai-memory"
-      ]
-    },
-    {
-      "group": "Economy",
-      "pages": [
-        "economy/credits",
-        "economy/wpp",
-        "economy/rewards"
-      ]
-    }
-  ],
-  "footerSocials": {
-    "x": "https://twitter.com/ben__crypto23",
-    "discord": "https://discord.gg/cronosarmy"
   }
 }
