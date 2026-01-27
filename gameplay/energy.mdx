@@ -1,54 +1,69 @@
 ---
 title: "Energy System"
-description: "Manage your soldiers' energy to keep them battle-ready"
+description: "Manage soldier energy to keep your army battle-ready"
 ---
 
 # Energy System
 
-Soldiers need energy to fight. No energy = no battles.
+Soldiers need energy to fight. Managing energy is part of your strategy.
 
 ## How Energy Works
 
 - Every soldier has an **energy bar** (0-100%)
-- **Battles consume energy** (amount depends on battle length)
-- **Energy regenerates over time** automatically
-- **Low energy soldiers can't enter battles**
-
-## Energy Threshold
-
-Soldiers need **minimum 20% energy** to enter a battle.
+- **Battles consume energy** based on battle length
+- **Energy regenerates** automatically over time
+- **Minimum 20% energy** required to enter battle
 
 <Warning>
-  A soldier at 19% energy cannot fight until they recover!
+A soldier at 19% energy cannot fight until they recover past 20%.
 </Warning>
 
-## Recovery Methods
+## Energy & Combat Power
+
+**Important:** Energy does NOT affect how hard your soldier hits.
+
+When your soldier enters battle, they fight at **full power** regardless of energy level. Energy only determines whether they CAN enter — not how well they perform.
+
+| Energy | Can Battle? | Combat Power |
+|--------|-------------|--------------|
+| 100% | ✅ Yes | Full |
+| 50% | ✅ Yes | Full |
+| 20% | ✅ Yes | Full |
+| 19% | ❌ No | — |
+
+## Recovery Options
 
 ### Passive Regeneration
-Energy regenerates automatically over time. Just wait.
 
-### Active Recovery
-- Use **Credits** to instantly restore energy
-- More credits = faster recovery
+Energy recovers automatically over time. Just wait. This is free but slow.
 
-## Strategic Considerations
+### Credit Recovery
 
-<Tip>
-  **Rotate your army.** Don't send the same soldiers into every battle. Let tired soldiers rest while fresh ones fight.
-</Tip>
+Spend **Credits** to instantly restore energy. Useful when you need soldiers ready NOW.
 
-### Army Management Tips
+## Strategic Tips
 
-1. **Check energy before sieges** — Don't start a fight with exhausted soldiers
-2. **Keep reserves** — Always have backup soldiers ready
-3. **Time your attacks** — Big assault coming? Make sure everyone's charged
-4. **Use credits wisely** — Save instant recovery for critical moments
+<AccordionGroup>
+  <Accordion title="Rotate Your Army">
+    Don't send the same soldiers into every battle. Let tired soldiers rest while fresh ones fight.
+  </Accordion>
+  <Accordion title="Check Before Sieges">
+    Before starting a siege, verify your chosen soldiers have enough energy. Getting stuck mid-campaign is frustrating.
+  </Accordion>
+  <Accordion title="Keep Reserves">
+    Always have backup soldiers ready. If your mains are exhausted and you get attacked, you need defenders.
+  </Accordion>
+  <Accordion title="Save Credits for Emergencies">
+    Don't blow credits on routine recovery. Save instant recharges for critical defenses or time-sensitive attacks.
+  </Accordion>
+</AccordionGroup>
 
 ## Energy Display
 
-In the battlefield UI:
-- **Green bar** = High energy, ready to fight
-- **Yellow bar** = Medium energy, can still battle
-- **Red bar** = Low energy, limited or no battles
+In the UI, soldier energy shows as a colored bar:
 
-Your soldier's power is not affected by energy — when they fight, they fight at full strength. Energy just determines if they CAN fight.
+- 🟢 **Green** — High energy, ready to fight
+- 🟡 **Yellow** — Medium energy, still battle-capable  
+- 🔴 **Red** — Low energy, limited or no battles
+
+Plan your campaigns around your army's energy state.

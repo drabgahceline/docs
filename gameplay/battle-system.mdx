@@ -9,77 +9,97 @@ Cronos Army features strategic turn-based combat where every decision matters.
 
 ## How Battles Work
 
-When you enter a battle, you face off against the defending army (or attackers, if you're defending). Combat alternates between sides until one team is eliminated.
+When you enter a battle, your soldiers face the enemy team. Combat alternates until one side is eliminated.
 
 ### The Combat Loop
 
-```mermaid
-flowchart LR
-    A[Select Soldier] --> B[Choose Action]
-    B --> C[Pick Target]
-    C --> D[Execute Attack]
-    D --> E[Enemy Responds]
-    E --> A
+```
+Your Turn → Select Soldier → Choose Action → Pick Target → Attack Executes → Enemy Turn → Repeat
 ```
 
-### Your Choices
+## Your Turn
 
-**1. Select Soldier**
-Choose which of your soldiers acts this turn. Consider:
-- Current health
-- Personality (affects special moves)
-- Strategic position
+Each turn, you make three decisions:
 
-**2. Choose Action**
+### 1. Select Your Soldier
+
+Choose which soldier acts this turn. Consider:
+- **Health** — Protect wounded soldiers
+- **Personality** — Match specials to the situation
+- **Energy** — All soldiers in battle fight at full power
+
+### 2. Choose Your Action
 
 <CardGroup cols={3}>
   <Card title="Attack" icon="sword">
-    Full damage, no protection. Best when you can finish an enemy.
+    **Full damage**, no protection. Best for finishing enemies.
   </Card>
   <Card title="Defensive" icon="shield">
-    Reduced damage dealt, but you take less damage too. Good when low on health.
+    **Reduced damage** dealt and received. Good when low on health.
   </Card>
   <Card title="Special" icon="star">
-    Unique ability based on personality. Can turn the tide.
+    **Unique ability** based on personality. Can turn the tide.
   </Card>
 </CardGroup>
 
-**3. Pick Target**
-Select which enemy soldier to attack. Focus fire to eliminate threats quickly.
+### 3. Pick Your Target
+
+Select which enemy to attack. **Focus fire** — eliminating one enemy quickly is usually better than spreading damage.
 
 ## Personality Specials
 
 Every soldier personality has a unique special ability:
 
-| Personality | Special | Effect |
-|-------------|---------|--------|
-| Aggressive | Piercing Strike | Ignores 50% of enemy defense |
-| Intelligent | Analyze Weakness | +40% damage to target |
-| Reckless | All-In | 2x damage, but take 50% more next turn |
-| Defensive | Shield Wall | -60% damage taken this turn |
-| Funny | Distract | Enemy has 30% miss chance next attack |
-| Mysterious | Shadow Step | 40% chance to dodge next attack |
-| Inspiring | Rally | Heal all allies for 15% |
-| Stubborn | Last Stand | Can't die this turn (min 1 HP) |
-
-## Defender AI
-
-When you attack, enemy soldiers respond based on THEIR personalities:
-
-- **Aggressive defenders** target your weakest soldier
-- **Stubborn defenders** attack whoever hit them last
-- **Intelligent defenders** focus the biggest threat
-- **Defensive defenders** protect low-health allies
-
-Understanding enemy patterns helps you predict their moves.
-
-## Winning Battles
-
-Eliminate all enemy soldiers to win. Rewards:
-- Territory captured/defended
-- 25 WPP (5 base + 20 victory bonus)
-- CRO income from held territory
+| Personality | Special Move | Effect |
+|-------------|--------------|--------|
+| **Aggressive** | Piercing Strike | Ignores 50% of enemy defense |
+| **Intelligent** | Analyze Weakness | +40% damage to target |
+| **Reckless** | All-In | 2x damage, take +50% damage next turn |
+| **Defensive** | Shield Wall | -60% damage taken this turn |
+| **Funny** | Distract | Enemy has 30% miss chance |
+| **Mysterious** | Shadow Step | 40% dodge chance next attack |
+| **Inspiring** | Rally | Heal all allies 15% |
+| **Stubborn** | Last Stand | Can't die this turn (min 1 HP) |
 
 <Tip>
-  Focus fire is usually the best strategy. A dead enemy deals no damage.
+Learn when to use each special. A well-timed Shield Wall or Rally can save a losing battle.
 </Tip>
+
+## Enemy AI Behavior
+
+When defending, enemy soldiers respond based on their personalities:
+
+- **Aggressive** defenders hunt your weakest soldier
+- **Stubborn** defenders attack whoever hit them last
+- **Intelligent** defenders focus your biggest threat
+- **Defensive** defenders protect their wounded allies
+
+Understanding these patterns helps you predict enemy moves.
+
+## Winning Strategies
+
+<AccordionGroup>
+  <Accordion title="Focus Fire">
+    Concentrate attacks on one enemy. A dead enemy deals zero damage. Spreading damage lets everyone keep attacking you.
+  </Accordion>
+  <Accordion title="Protect Your Wounded">
+    Switch hurt soldiers to Defensive stance. Use Inspiring soldiers to Rally heal. Don't let enemies pick off your weak links.
+  </Accordion>
+  <Accordion title="Time Your Specials">
+    Don't spam specials randomly. Save Piercing Strike for high-defense enemies. Use Shield Wall when you're about to take a big hit.
+  </Accordion>
+  <Accordion title="Read the Enemy">
+    Watch enemy personalities. If they're all Aggressive, they'll swarm your weakest soldier — protect them or sacrifice them strategically.
+  </Accordion>
+</AccordionGroup>
+
+## Battle Rewards
+
+| Outcome | WPP Earned |
+|---------|------------|
+| Participate | +5 |
+| Win | +20 bonus |
+| Capture territory | +10 bonus |
+| Defend territory | +10 bonus |
+
+**Example:** Win an attacking siege = 5 + 20 + 10 = **35 WPP**
