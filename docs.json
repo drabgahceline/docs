@@ -58,7 +58,7 @@
       "anchors": [
         {
           "anchor": "Play Now",
-          "href": "https://cronosarmy.com",
+          "href": "https://croarmy.site",
           "icon": "gamepad"
         },
         {
@@ -73,7 +73,7 @@
     "primary": {
       "type": "button",
       "label": "Launch Game",
-      "href": "https://cronosarmy.com/command-center"
+      "href": "https://croarmy.site/command-center"
     }
   },
   "footer": {
