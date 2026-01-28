@@ -32,6 +32,7 @@
             "pages": [
               "gameplay/territories",
               "gameplay/battle-system",
+              "gameplay/training",
               "gameplay/soldier-personalities",
               "gameplay/energy"
             ]
@@ -40,6 +41,7 @@
             "group": "Your Army",
             "pages": [
               "army/soldiers",
+              "army/gear",
               "army/rarity-stats",
               "army/ai-memory"
             ]

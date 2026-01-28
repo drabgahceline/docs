@@ -93,6 +93,88 @@ Understanding these patterns helps you predict enemy moves.
   </Accordion>
 </AccordionGroup>
 
+---
+
+## Card Battles (Siege Combat)
+
+When attacking or defending territories, combat uses the **card battle** system — a tactical showdown between soldier cards.
+
+### Card Battle Overview
+
+Each soldier becomes a **battle card** with:
+- **Health** — How much damage they can take
+- **Attack** — Base damage dealt
+- **Personality** — Determines their special ability
+- **Special Move** — One-time powerful ability (once per battle)
+
+### Siege Card Combat
+
+Territory sieges use card battles:
+
+1. **Attacker deploys** up to 3 soldier cards
+2. **Defender's cards** are already assigned to the territory
+3. **Turn-based combat** — each side picks actions
+4. **Last team standing wins**
+
+### Card Actions
+
+Each turn, pick an action for your active soldier:
+
+<CardGroup cols={3}>
+  <Card title="Attack" icon="sword">
+    Deal **full damage** to target. No protection.
+  </Card>
+  <Card title="Defensive" icon="shield">
+    Deal **50% damage**, take **50% less** damage.
+  </Card>
+  <Card title="Special" icon="star">
+    Unleash your **personality ability**. One use per battle.
+  </Card>
+</CardGroup>
+
+### Personality Special Moves
+
+Each personality has a unique game-changing ability:
+
+| Personality | Special Name | Effect |
+|-------------|--------------|--------|
+| **Aggressive** | Relentless Assault | 2x damage, ignores all defense |
+| **Relaxed** | Second Wind | Heal 50% HP, immune to damage this round |
+| **Intelligent** | Exploit Weakness | 3x damage to lowest HP enemy |
+| **Mysterious** | Mind Control | Target attacks their own ally |
+| **Stubborn** | 💎 HODL | Reflect 50% damage back to attacker |
+| **Funny** | Wild Card | Random: heal all 50% OR 2x damage to all OR swap HP |
+| **Inspiring** | Rally Cry | Heal all allies 30%, boost their next attack |
+| **Reckless** | Blaze of Glory | Massive damage, but take 50% recoil |
+| **Zombie** | Undying | Survive fatal blow with 1 HP (once) |
+
+<Warning>
+Specials can only be used **once per battle**. Time them carefully — a wasted special can cost you the fight.
+</Warning>
+
+### Progressive Siege
+
+Territory sieges are **progressive** — damage carries over:
+
+1. **Each battle chips away** at defender/attacker health
+2. **Multiple attacks** may be needed to capture
+3. **Defenders can reinforce** between attacks
+4. **Territory falls** when all defenders are eliminated
+
+This creates strategic depth — do you go all-in or wear them down over time?
+
+---
+
+## Battle Types Summary
+
+| Type | Where | Format | Stakes |
+|------|-------|--------|--------|
+| **Quick Battle** | Battle Arena | 3v3 cards | WPP rewards |
+| **Territory Siege** | World Map | Progressive cards | Territory control |
+| **Defense** | Your territories | Automatic cards | Keep your land |
+
+---
+
 ## Battle Rewards
 
 | Outcome | WPP Earned |
