@@ -32,6 +32,7 @@
             "pages": [
               "gameplay/territories",
               "gameplay/battle-system",
+              "gameplay/missions",
               "gameplay/training",
               "gameplay/soldier-personalities",
               "gameplay/energy"
