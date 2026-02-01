@@ -50,6 +50,7 @@
           {
             "group": "Economy",
             "pages": [
+              "economy/ca-token",
               "economy/credits",
               "economy/wpp",
               "economy/rewards"
