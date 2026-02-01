@@ -1,0 +1,200 @@
+---
+title: "Bases"
+description: "Mint, upgrade, and merge your base territories for powerful bonuses"
+---
+
+# Bases
+
+Bases are your strategic headquarters in Cronos Army. They host your soldiers, provide facility bonuses, and can be upgraded through a tier system.
+
+## Core Concepts
+
+<CardGroup cols={3}>
+  <Card title="Host Soldiers" icon="users">
+    Each base can hold 3+ soldiers who benefit from facility bonuses
+  </Card>
+  <Card title="Build Facilities" icon="building">
+    Four facility types provide bonuses: Hospital, Forge, Barracks, Comms Center
+  </Card>
+  <Card title="Merge & Upgrade" icon="arrows-to-circle">
+    Combine two bases of the same tier to create a higher-tier base
+  </Card>
+</CardGroup>
+
+## Minting Your First Base
+
+<Steps>
+  <Step title="Navigate to Command Center">
+    Go to Command Center → Territories
+  </Step>
+  <Step title="Click Mint New Base">
+    Select the mint option
+  </Step>
+  <Step title="Pay the Mint Fee">
+    100,000 CA + gas fees
+  </Step>
+  <Step title="Confirm Transaction">
+    Wait for on-chain confirmation
+  </Step>
+</Steps>
+
+Your base starts at **Tier 1** with:
+- Capacity for **3 soldiers**
+- **4 facility slots** (one per type)
+- Max facility level: **20**
+
+## Base Tiers
+
+Higher tier bases hold more soldiers and allow higher facility levels:
+
+| Tier | Soldier Capacity | Max Facility Level | How to Get |
+|------|------------------|-------------------|------------|
+| 1 | 3 | 20 | Mint directly |
+| 2 | 6 | 30 | Merge two Tier 1 |
+| 3 | 12 | 40 | Merge two Tier 2 |
+| 4 | 24 | 50 | Merge two Tier 3 |
+| 5 | 48 | 60 | Merge two Tier 4 |
+
+## Building Facilities
+
+Each base supports 4 facility types. Build them using Development Points (DP) earned from PvP battles.
+
+### The Four Facilities
+
+| Facility | Bonus | Max Bonus |
+|----------|-------|-----------|
+| **Hospital** | Energy regeneration rate | +80% |
+| **Forge** | Gear drop chance during training | +50% |
+| **Barracks** | Training XP gained | +100% |
+| **Comms Center** | PvP DP earned | +40% |
+
+### Building Costs
+
+- **DP cost:** 2 DP per facility
+- **Build time:** 2 hours (or instant with 2 Credits)
+- **Limit:** One of each type per base
+
+<Note>
+Only soldiers **assigned to the base** benefit from facility bonuses. Soldiers not assigned to any base don't get these bonuses.
+</Note>
+
+## Upgrading Facilities
+
+Once built, facilities start at Level 1. Upgrade them to increase their bonus.
+
+### Upgrade Costs
+
+| Target Level | DP Cost | Time | Credit Cost |
+|-------------|---------|------|-------------|
+| 2 | 10 DP | 2.8 hours | 3 Credits |
+| 5 | 62 DP | 11.2 hours | 12 Credits |
+| 10 | 250 DP | 31.6 hours | 32 Credits |
+| 15 | 562 DP | 58.1 hours | 59 Credits |
+| 20 | 1,000 DP | 89.4 hours | 90 Credits |
+
+**Formula:**
+- DP cost: `2.5 × targetLevel²`
+- Time: `targetLevel^1.5 hours`
+
+### Facility Bonuses by Level
+
+Higher levels give bigger bonuses, but with diminishing returns:
+
+| Level | Hospital | Barracks | Forge | Comms |
+|-------|----------|----------|-------|-------|
+| 1 | +3.8% | +3.2% | +2.0% | +2.5% |
+| 5 | +16.0% | +14.3% | +9.1% | +13.3% |
+| 10 | +26.7% | +25.0% | +14.3% | +16.0% |
+| 15 | +34.3% | +33.3% | +18.8% | +20.0% |
+| 20 | +40.0% | +40.0% | +22.2% | +22.9% |
+
+<Tip>
+Due to diminishing returns, it's more efficient to keep all facilities at similar levels rather than maxing one first.
+</Tip>
+
+## Merging Bases
+
+Combine two bases of the same tier to create a higher-tier base.
+
+### Merge Requirements
+
+| Merge | Total Facility Levels Required |
+|-------|-------------------------------|
+| Tier 1 → Tier 2 | 50 levels (each base) |
+| Tier 2 → Tier 3 | 100 levels (each base) |
+| Tier 3 → Tier 4 | 140 levels (each base) |
+| Tier 4 → Tier 5 | 180 levels (each base) |
+
+**Example:** To merge Tier 1 bases, each needs 50 total facility levels. Four facilities at Level 13 each = 52 levels ✓
+
+### Merge Process
+
+<Steps>
+  <Step title="Validate Requirements">
+    System checks both bases meet level threshold
+  </Step>
+  <Step title="Generate New Metadata">
+    New NFT metadata is prepared and uploaded to IPFS
+  </Step>
+  <Step title="Blockchain Transaction">
+    Contract burns the 2 old NFTs and mints 1 new higher-tier NFT
+  </Step>
+  <Step title="Facilities Averaged">
+    New base inherits averaged facility levels from both old bases
+  </Step>
+</Steps>
+
+<Warning>
+No active facility upgrades can be in progress on either base when merging.
+</Warning>
+
+### How Facility Averaging Works
+
+```
+Base A: Hospital(13), Forge(13), Barracks(13), Comms(13) = 52 levels
+Base B: Hospital(13), Forge(11), Barracks(15), Comms(13) = 52 levels
+
+↓ MERGE ↓
+
+New Tier 2 Base: Hospital(13), Forge(12), Barracks(14), Comms(13) = 52 levels
+```
+
+Your progress carries over! You don't lose facility investment when merging.
+
+## Strategy Tips
+
+<CardGroup cols={2}>
+  <Card title="Build All 4 First" icon="hammer">
+    Get all facilities built at Level 1 before upgrading. The initial bonuses are cheap.
+  </Card>
+  <Card title="Level Evenly" icon="scale-balanced">
+    Keep all facilities within 2-3 levels of each other for best efficiency.
+  </Card>
+  <Card title="Plan for Merges" icon="calculator">
+    Target 13 levels each (52 total) for Tier 1 → 2 merge.
+  </Card>
+  <Card title="Prioritize by Playstyle" icon="user">
+    PvP focus → Comms. Training focus → Barracks. Active play → Hospital.
+  </Card>
+</CardGroup>
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Can I downgrade or rebuild facilities?">
+    No. Facility choices and upgrades are permanent. Plan carefully.
+  </Accordion>
+  <Accordion title="Do facility bonuses stack across multiple bases?">
+    No. Each base has independent bonuses. Only soldiers assigned to that base benefit.
+  </Accordion>
+  <Accordion title="What happens to facilities if I sell the base NFT?">
+    Facilities transfer with the base. The new owner inherits all facility levels.
+  </Accordion>
+  <Accordion title="Can I upgrade multiple facilities at once?">
+    No. Only one upgrade per facility at a time. But you can upgrade different facilities simultaneously.
+  </Accordion>
+</AccordionGroup>
+
+<Card title="Manage Your Bases" icon="building" href="https://croarmy.site/command-center">
+  Build and upgrade your bases →
+</Card>

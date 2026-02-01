@@ -24,6 +24,7 @@
               "getting-started/claim-soldiers",
               "getting-started/connect-wallet",
               "getting-started/first-battle",
+              "getting-started/multi-chain",
               "getting-started/faq"
             ]
           },
@@ -32,8 +33,14 @@
             "pages": [
               "gameplay/territories",
               "gameplay/battle-system",
+              "gameplay/pvp",
+              "gameplay/conquest",
               "gameplay/missions",
               "gameplay/training",
+              "gameplay/bases",
+              "gameplay/facilities",
+              "gameplay/commander-progression",
+              "gameplay/leaderboards",
               "gameplay/soldier-personalities",
               "gameplay/energy"
             ]
@@ -42,6 +49,7 @@
             "group": "Your Army",
             "pages": [
               "army/soldiers",
+              "army/zombies",
               "army/gear",
               "army/rarity-stats",
               "army/ai-memory"
@@ -52,8 +60,19 @@
             "pages": [
               "economy/ca-token",
               "economy/credits",
+              "economy/bundles",
+              "economy/staking",
               "economy/wpp",
               "economy/rewards"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/new-player",
+              "guides/earning-cro",
+              "guides/referral-program",
+              "guides/advanced-strategy"
             ]
           }
         ]
