@@ -21,8 +21,9 @@
             "group": "Getting Started",
             "pages": [
               "introduction",
-              "getting-started/claim-soldiers",
+              "getting-started/quickstart",
               "getting-started/connect-wallet",
+              "getting-started/claim-soldiers",
               "getting-started/first-battle",
               "getting-started/multi-chain",
               "getting-started/faq"
@@ -31,35 +32,38 @@
           {
             "group": "Gameplay",
             "pages": [
-              "gameplay/territories",
+              "gameplay/training",
+              "gameplay/leveling",
               "gameplay/battle-system",
               "gameplay/pvp",
+              "gameplay/territories",
               "gameplay/conquest",
               "gameplay/missions",
-              "gameplay/training",
               "gameplay/bases",
               "gameplay/facilities",
+              "gameplay/energy",
               "gameplay/commander-progression",
               "gameplay/leaderboards",
-              "gameplay/soldier-personalities",
-              "gameplay/energy"
+              "gameplay/soldier-personalities"
             ]
           },
           {
             "group": "Your Army",
             "pages": [
               "army/soldiers",
-              "army/zombies",
               "army/gear",
+              "army/gear-system",
               "army/rarity-stats",
+              "army/zombies",
               "army/ai-memory"
             ]
           },
           {
             "group": "Economy",
             "pages": [
-              "economy/ca-token",
               "economy/credits",
+              "economy/credit-shop",
+              "economy/ca-token",
               "economy/bundles",
               "economy/staking",
               "economy/wpp",
@@ -82,7 +86,7 @@
       "anchors": [
         {
           "anchor": "Play Now",
-          "href": "https://croarmy.site",
+          "href": "https://cronos.army",
           "icon": "gamepad"
         },
         {
@@ -97,7 +101,7 @@
     "primary": {
       "type": "button",
       "label": "Launch Game",
-      "href": "https://croarmy.site/command-center"
+      "href": "https://cronos.army/command-center"
     }
   },
   "footer": {

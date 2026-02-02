@@ -1,0 +1,137 @@
+---
+title: "Leveling System"
+description: "How soldiers gain XP and level up"
+---
+
+# Leveling System
+
+Soldiers gain XP through training and combat. Higher levels mean stronger soldiers.
+
+## XP Requirements
+
+| Level | Total XP Needed | XP to Next Level |
+|-------|-----------------|------------------|
+| 1 | 0 | 500 |
+| 2 | 500 | 1,000 |
+| 3 | 1,500 | 1,500 |
+| 4 | 3,000 | 2,000 |
+| 5 | 5,000 | 2,500 |
+| 6 | 7,500 | 3,000 |
+| 7 | 10,500 | 3,500 |
+| 8 | 14,000 | 4,000 |
+| 9 | 18,000 | 4,500 |
+| 10 | 22,500 | — |
+
+<Note>
+Level 10 is currently the maximum level.
+</Note>
+
+---
+
+## XP Sources
+
+### Training (Primary Source)
+
+| Method | XP per Session |
+|--------|----------------|
+| Active Training (Marksman + Elite) | ~125 XP |
+| Active Training (average) | ~80-100 XP |
+| Passive Training (24h) | 40 XP |
+
+Training is the most reliable way to level soldiers. Active training with good performance is the fastest path.
+
+### Combat XP
+
+| Outcome | XP Earned |
+|---------|-----------|
+| Battle Victory | 25 XP |
+| Battle Defeat | 2 XP |
+| Successful Defense | 5 XP |
+
+Combat XP is smaller but adds up over many battles.
+
+### Missions
+
+Mission XP varies by difficulty:
+
+| Difficulty | XP on Success |
+|------------|---------------|
+| Easy | 20 XP |
+| Medium | 50 XP |
+| Hard | 100 XP |
+| Legendary | 200 XP |
+
+<Warning>
+Failed missions give only 20% XP. Choose missions your soldiers can handle.
+</Warning>
+
+---
+
+## Level Benefits
+
+Higher level soldiers are stronger in combat:
+
+- **Power increase** — XP contributes to total power (XP ÷ 100)
+- **Unlocks** — Higher levels may unlock special abilities (coming soon)
+- **Prestige** — Show off your dedication on leaderboards
+
+### Power from XP
+
+Your soldier's power includes an XP bonus:
+
+```
+XP Power Bonus = Total XP ÷ 100
+```
+
+**Example:** A soldier with 5,000 XP (Level 5) gets +50 power from XP.
+
+---
+
+## Leveling Strategy
+
+<AccordionGroup>
+  <Accordion title="Fastest leveling">
+    1. Use Active Training on Elite difficulty
+    2. Aim for 85%+ accuracy (Marksman grade)
+    3. Train in batches (one drill benefits all soldiers)
+    4. Use instant complete if you want to train again same day
+  </Accordion>
+  <Accordion title="Passive leveling">
+    1. Start 24h passive training before bed
+    2. Collect 40 XP per soldier next day
+    3. Slower but zero effort
+  </Accordion>
+  <Accordion title="Combat leveling">
+    1. Fight battles for incremental XP
+    2. Victories give 25 XP
+    3. Even defeats give 2 XP
+    4. Good supplement to training
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Time to Max Level
+
+Rough estimates assuming daily play:
+
+| Method | Time to Level 10 |
+|--------|------------------|
+| Active Training only | ~2-3 months |
+| Passive Training only | ~18 months |
+| Mixed (active + combat) | ~2 months |
+
+<Tip>
+Focus your active training on your best soldiers. Let others passively train overnight.
+</Tip>
+
+---
+
+## Checking Progress
+
+View your soldier's XP and level:
+
+1. Go to **Soldiers** page
+2. Click on any soldier
+3. See **Level** and **XP** in the stats panel
+4. Progress bar shows XP toward next level

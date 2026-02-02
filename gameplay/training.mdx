@@ -11,10 +11,10 @@ Training is how your soldiers gain XP and level up. Choose between hands-on acti
 
 <CardGroup cols={2}>
   <Card title="Active Training" icon="crosshairs">
-    Play a shooting drill mini-game. Better performance = more XP + gear drops.
+    Play a shooting drill mini-game. Better performance = more XP.
   </Card>
   <Card title="Passive Training" icon="moon">
-    AFK training over 24 hours. Less XP, but zero effort required.
+    AFK training over 24 hours. Half the XP, but zero effort required.
   </Card>
 </CardGroup>
 
@@ -26,11 +26,11 @@ Jump into a target practice drill and earn rewards based on your performance.
 
 ### How It Works
 
-1. **Select a soldier** to train
-2. **Pay energy cost** (40 energy)
+1. **Select soldiers** to train (batch training supported)
+2. **Pay energy cost** (15 energy per soldier)
 3. **Play the drill** — shoot targets for 60 seconds
-4. **Get graded** — your accuracy determines rewards
-5. **Collect XP + chance for gear**
+4. **Get graded** — your accuracy determines XP multiplier
+5. **All selected soldiers** receive the same grade bonus
 
 ### The Shooting Drill
 
@@ -38,60 +38,69 @@ You have 60 seconds to hit as many targets as possible:
 
 - **Standard targets** — normal points
 - **Small targets** — harder to hit, more points
-- **Fast targets** — moving quickly, bonus points
 - **Headshots** — 2x points on any target
 
 <Tip>
-Focus on accuracy over speed. A Perfect grade is worth significantly more than spraying and missing.
+Focus on accuracy over speed. Higher accuracy = higher grade = more XP for ALL your training soldiers.
 </Tip>
 
-### Grades & Rewards
+### Grades & XP Multipliers
 
 Your accuracy determines your grade:
 
-| Grade | Accuracy | XP Multiplier | Gear Drop Chance |
-|-------|----------|---------------|------------------|
-| **Perfect** | 90%+ | 100% (540 XP) | 30% |
-| **Great** | 75-89% | 80% (432 XP) | 10% |
-| **Good** | 60-74% | 60% (324 XP) | 7% |
-| **OK** | Below 60% | 40% (216 XP) | 5% |
+| Grade | Accuracy | XP Multiplier | Example XP |
+|-------|----------|---------------|------------|
+| **Marksman** | 85%+ | 1.35x | ~108 XP |
+| **Sharpshooter** | 70-84% | 1.25x | ~100 XP |
+| **Qualified** | 55-69% | 1.15x | ~92 XP |
+| **Trained** | Below 55% | 1.0x | 80 XP |
+
+*Base XP is 80. Final XP = Base × Grade Multiplier × Speed Multiplier*
 
 ### Difficulty Modes
 
 Choose your challenge level:
 
-| Mode | Target Speed | Best For |
-|------|--------------|----------|
-| **Recruit** | Slow | Learning the drill |
-| **Soldier** | Normal | Balanced challenge |
-| **Elite** | Fast | Maximum bragging rights |
+| Mode | Target Speed | XP Multiplier | Best For |
+|------|--------------|---------------|----------|
+| **Recruit** | Slow | 0.7x | Learning the drill |
+| **Soldier** | Normal | 1.0x | Balanced challenge |
+| **Elite** | Fast | 1.16x | Maximum XP |
 
 <Note>
-Difficulty doesn't affect XP or gear drops — pick whatever's fun for you.
+**Difficulty DOES affect XP.** Elite mode is harder but rewards ~16% more XP than Soldier mode.
 </Note>
+
+### Maximum XP Calculation
+
+Best case scenario (Elite + Marksman):
+- Base: 80 XP
+- Grade (Marksman): × 1.35
+- Speed (Elite): × 1.16
+- **Total: ~125 XP per soldier**
 
 ---
 
 ## Passive Training
 
-Don't have time to play? Send your soldier on a 24-hour training mission.
+Don't have time to play? Send your soldiers on a 24-hour training mission.
 
 ### How It Works
 
-1. **Select a soldier** to train
-2. **Pay energy cost** (40 energy)
-3. **Soldier is unavailable** for 24 hours
-4. **Collect rewards** when timer ends
+1. **Select soldiers** to train
+2. **Pay energy cost** (15 energy per soldier)
+3. **Soldiers unavailable** for 24 hours
+4. **Collect rewards** when timer ends (or instant complete)
 
 ### Passive Rewards
 
 | Reward | Amount |
 |--------|--------|
-| **XP** | 30% of active max (162 XP) |
-| **Gear** | No drop chance |
+| **XP** | 40 XP (50% of base) |
+| **Gear** | Standard drop chance |
 
 <Warning>
-Soldiers in passive training cannot battle or be assigned to territories until training completes.
+Soldiers in passive training cannot battle or defend territories until training completes.
 </Warning>
 
 ---
@@ -102,38 +111,64 @@ Soldiers in passive training cannot battle or be assigned to territories until t
 |--------|--------|---------|
 | **Time** | ~60 seconds | 24 hours |
 | **Effort** | Play mini-game | None |
-| **Max XP** | 540 | 162 |
-| **Gear drops** | 5-30% chance | None |
+| **Energy Cost** | 15 | 15 |
+| **XP Range** | 80-125 | 40 |
+| **Best XP** | ~125 (Elite + Marksman) | 40 |
 | **Soldier availability** | Immediate | Locked 24h |
 
 **Recommendation:** Active training is always better if you have 60 seconds to spare. Use passive only when you won't be playing for a full day.
 
 ---
 
-## Energy Cost
+## Instant Complete
 
-Both training modes cost **40 energy** to start.
+Don't want to wait 24 hours? Pay **1 Credit** to instantly complete any training session.
 
-<AccordionGroup>
-  <Accordion title="What if I don't have enough energy?">
-    Wait for passive regeneration or spend Credits for instant recovery.
-  </Accordion>
-  <Accordion title="Can I cancel training?">
-    Active training can't be cancelled once started. Passive training... just wait it out.
-  </Accordion>
-  <Accordion title="Do facilities affect training?">
-    Yes! Upgraded facilities can boost XP gains and gear drop rates.
-  </Accordion>
-</AccordionGroup>
+- Flat cost regardless of time remaining
+- Soldier receives full XP reward immediately
+- Useful when you need soldiers ready NOW
 
 ---
 
-## Daily Drill Leaderboard
+## Batch Training
 
-Compete with other commanders on the daily drill leaderboard:
+Train multiple soldiers at once:
 
-- **Top 5 scores** displayed on the results screen
-- **Resets daily** at midnight UTC
-- **Bragging rights** for the best shooters
+1. Select up to 10 soldiers
+2. Play ONE drill
+3. ALL soldiers receive the same grade bonus
+4. Each soldier pays 15 energy individually
 
-Your position shows after each drill if you're in the top rankings.
+<Tip>
+Batch training is efficient — one good drill run benefits your entire squad.
+</Tip>
+
+---
+
+## Facility Bonuses
+
+Upgraded facilities can boost your training:
+
+- **Barracks** — Increases XP gained from training
+- **Forge** — Increases gear drop chance
+
+Check your territory facilities to see current bonuses.
+
+---
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="What if I don't have enough energy?">
+    Wait for passive regeneration (10%/hour) or spend Credits for instant recovery (0.05 credits per 1%).
+  </Accordion>
+  <Accordion title="Can I cancel training?">
+    Active training can't be cancelled once the drill starts. Passive training can be instant-completed for 1 Credit.
+  </Accordion>
+  <Accordion title="Do zombies train differently?">
+    No — all soldiers (including zombies) use the same training system.
+  </Accordion>
+  <Accordion title="What's the best strategy?">
+    Train in batches with active mode on Elite difficulty. Aim for 85%+ accuracy to hit Marksman grade.
+  </Accordion>
+</AccordionGroup>

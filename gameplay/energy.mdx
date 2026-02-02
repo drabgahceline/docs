@@ -5,18 +5,70 @@ description: "Manage soldier energy to keep your army battle-ready"
 
 # Energy System
 
-Soldiers need energy to fight. Managing energy is part of your strategy.
+Soldiers need energy to fight and train. Managing energy is part of your strategy.
 
 ## How Energy Works
 
 - Every soldier has an **energy bar** (0-100%)
-- **Battles consume energy** based on battle length
+- **Actions consume energy** (battles, training)
 - **Energy regenerates** automatically over time
 - **Minimum 20% energy** required to enter battle
 
 <Warning>
 A soldier at 19% energy cannot fight until they recover past 20%.
 </Warning>
+
+---
+
+## Energy Costs
+
+### Battle Costs
+
+| Action | Energy Cost |
+|--------|-------------|
+| Attack (per soldier) | 5% |
+| Defend (per soldier) | 2% |
+| Defeat penalty | +15% |
+| Retreat (Round 1) | +5% |
+| Retreat (Round 2) | +10% |
+
+### Training Costs
+
+| Training Type | Energy Cost |
+|---------------|-------------|
+| Active Training | 15% |
+| Passive Training | 15% |
+
+---
+
+## Energy Recovery
+
+### Passive Regeneration (Free)
+
+Energy recovers automatically over time:
+
+| Condition | Recovery Rate |
+|-----------|---------------|
+| Base rate | 10% per hour |
+| With Hospital facility | Up to 15% per hour |
+
+**Time to full recovery (0→100%):** ~10 hours base, ~7 hours with Hospital
+
+### Instant Recovery (Credits)
+
+Spend Credits to restore energy immediately:
+
+| Action | Cost |
+|--------|------|
+| Per 1% energy | 0.05 credits |
+| Full recharge (0→100%) | 5 credits |
+| 50% recharge | 2.5 credits |
+
+<Tip>
+Only use instant recovery for urgent situations — passive regen is free.
+</Tip>
+
+---
 
 ## Energy & Combat Power
 
@@ -31,15 +83,7 @@ When your soldier enters battle, they fight at **full power** regardless of ener
 | 20% | ✅ Yes | Full |
 | 19% | ❌ No | — |
 
-## Recovery Options
-
-### Passive Regeneration
-
-Energy recovers automatically over time. Just wait. This is free but slow.
-
-### Credit Recovery
-
-Spend **Credits** to instantly restore energy. Useful when you need soldiers ready NOW.
+---
 
 ## Strategic Tips
 
@@ -56,14 +100,35 @@ Spend **Credits** to instantly restore energy. Useful when you need soldiers rea
   <Accordion title="Save Credits for Emergencies">
     Don't blow credits on routine recovery. Save instant recharges for critical defenses or time-sensitive attacks.
   </Accordion>
+  <Accordion title="Use Hospital Facilities">
+    Upgrade your Hospital facility to boost regeneration rate. The difference adds up over time.
+  </Accordion>
 </AccordionGroup>
+
+---
 
 ## Energy Display
 
 In the UI, soldier energy shows as a colored bar:
 
-- 🟢 **Green** — High energy, ready to fight
-- 🟡 **Yellow** — Medium energy, still battle-capable  
-- 🔴 **Red** — Low energy, limited or no battles
+- 🟢 **Green** (60-100%) — High energy, fully ready
+- 🟡 **Yellow** (20-59%) — Medium energy, battle-capable  
+- 🔴 **Red** (0-19%) — Low energy, cannot battle
 
 Plan your campaigns around your army's energy state.
+
+---
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Do defenders lose energy?">
+    Yes, but less than attackers. Defenders pay 2% per soldier vs 5% for attackers.
+  </Accordion>
+  <Accordion title="Does energy affect training?">
+    You need 15% energy to start training, but energy level doesn't affect XP earned.
+  </Accordion>
+  <Accordion title="What happens if I run out mid-battle?">
+    You can't run out mid-battle. Energy is deducted when you enter. Once in, you fight until the end.
+  </Accordion>
+</AccordionGroup>
