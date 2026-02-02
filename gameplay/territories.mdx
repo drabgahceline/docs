@@ -1,119 +1,141 @@
 ---
 title: "Territories"
-description: "Conquer and hold territories to earn passive CRO income"
+description: "Control territories to earn passive CRO income"
 ---
 
 # Territories
 
-The battlefield is divided into territories. Control them to earn CRO every hour.
+Territories generate **passive CRO income** every hour. Capture them, hold them, and stake CA tokens to maximize earnings.
 
-## How Territories Work
+## How It Works
 
-Each territory:
-- **Generates CRO** passively while you control it
-- **Can be attacked** by other players at any time
-- **Must be defended** or you lose it (and the income)
+- Each territory generates CRO hourly while you control it
+- Other players can attack your territories at any time
+- You must defend or lose control (and the income)
+- Maximum **5 territories** per wallet
 
-## Territory States
+## Territory Tiers
 
-| State | Meaning | Action |
-|-------|---------|--------|
-| **Owned** | You control it | Collect income, defend if attacked |
-| **Under Siege** | Being attacked | Defend now or lose it! |
-| **Enemy** | Another player owns it | Attack to capture |
-| **Neutral** | Unclaimed | Easy capture, no defenders |
+Territories come in three tiers with different earning rates:
 
-## The Siege System
-
-When someone attacks your territory, it doesn't change hands immediately. The **siege system** gives defenders time to respond.
-
-### How Sieges Work
-
-<Steps>
-  <Step title="Attacker Initiates Siege">
-    An attacker selects your territory and starts a siege. This locks the territory into "Under Siege" state.
-  </Step>
-  <Step title="Defense Window Opens">
-    You have a limited time window to respond and defend your territory.
-  </Step>
-  <Step title="Battle or Forfeit">
-    If you defend, card combat determines the winner. If you don't respond in time, the attacker wins by default.
-  </Step>
-</Steps>
-
-### Siege Timer
-
-- **Defense window:** You have time to respond before auto-capture
-- **Active defense required:** Simply owning soldiers isn't enough—you must manually deploy defenders
-- **Real-time notifications:** Check your alerts regularly to avoid losing territories
+| Tier | Base CRO/Hour | Availability |
+|------|---------------|--------------|
+| **Common** | ~0.065 CRO | Most common |
+| **Rare** | ~0.21 CRO | Less common |
+| **Epic** | ~1.49 CRO | Very rare |
 
 <Note>
-The siege timer creates urgency. Active players who check in regularly have the advantage over passive holders.
+Epic territories earn 20x+ more than Common, but they're heavily contested.
 </Note>
 
-### Auto-Capture
+## Staking CA Tokens
 
-If the defense window expires without a response:
-- Territory transfers to the attacker automatically
-- No battle occurs—you forfeit by absence
-- Your passive income from that territory stops immediately
+Stake CA tokens on your territories to boost income:
 
-<Warning>
-AFK = territory loss. The siege system rewards active players who engage with the game daily.
-</Warning>
+| Stake Amount | Multiplier |
+|--------------|------------|
+| 1,000 - 4,999 CA | 1.0x (base) |
+| 5,000 - 9,999 CA | 1.5x |
+| 10,000 - 24,999 CA | 2.0x |
+| 25,000 - 49,999 CA | 3.0x |
+| 50,000+ CA | 4.0x |
+
+**Example:** An Epic territory with 50k CA staked:
+- Base: 1.49 CRO/hr
+- With 4x multiplier: ~5.96 CRO/hr
+
+<Tip>
+Minimum stake is 1,000 CA. You need CA tokens to claim territories.
+</Tip>
+
+### Stake Lock
+
+Once you stake CA on a territory:
+- **24-hour lock** before you can reduce the stake
+- You can **increase** stake anytime during the lock
+- If you lose the territory, your CA is returned
+
+---
 
 ## Capturing Territories
 
+To capture a territory:
+
 <Steps>
-  <Step title="Pick a Target">
-    Select an enemy or neutral territory on the battlefield map.
+  <Step title="Select Target">
+    Find a territory on the battlefield map (enemy-owned or neutral)
   </Step>
-  <Step title="Start the Siege">
-    Click **Attack** and select which soldiers to deploy. This begins the siege timer.
+  <Step title="Start Siege">
+    Click Attack and select 3 soldiers for battle
   </Step>
-  <Step title="Wait or Battle">
-    The defender may respond. If they do, card combat begins. If they don't, you win automatically.
+  <Step title="Card Battle">
+    Fight the defenders using the 3v3 card battle system
   </Step>
-  <Step title="Claim Your Prize">
-    Territory is yours. CRO income starts immediately.
+  <Step title="Claim Victory">
+    Win the battle to take control. Stake CA to start earning.
   </Step>
 </Steps>
 
-## Defending Your Territories
+### Requirements
+
+- At least **3 soldiers** with **15%+ energy** each
+- **CA tokens** to stake on the territory
+- Not already at the **5 territory limit**
+
+---
+
+## Defending Territories
 
 When someone attacks your territory:
 
-1. You'll get a **siege notification**—check in regularly!
-2. Select the territory under siege
-3. Deploy defenders before the timer expires
-4. Win the battle to keep control
+1. You receive a notification
+2. The territory enters "Under Siege" state
+3. Your assigned defenders fight automatically via card battle
+4. Win = keep territory. Lose = territory transfers to attacker.
+
+### Assigning Defenders
+
+Each territory needs soldiers assigned to defend it:
+- Assign soldiers from your roster
+- Higher power soldiers = better defense
+- Keep defenders' energy high
 
 <Warning>
-Undefended territories are easy targets. Active players keep what they hold.
+Territories without strong defenders are easy targets. Check your garrisons regularly.
 </Warning>
 
-### Defense Strategy
+---
 
-- **Stack high-value territories:** Put your best soldiers on territories you can't afford to lose
-- **Check in daily:** Sieges can happen anytime—regular logins let you respond
-- **Prioritize:** If multiple territories are under siege, defend the highest-income ones first
+## Conquest Protection
 
-## Territory Income
+After capturing a territory, you get a **3-hour protection window**:
+- No one can attack you during this time
+- Use it to stake CA and assign defenders
+- After 3 hours, you're fair game
 
-Different territories have different values:
-- **Strategic locations** earn more CRO per hour
-- **High-value territories** attract more attacks
-- **Multiple territories** = compounding income
+---
 
-Your total hourly income depends on:
-- Number of territories held
-- Value of each territory
-- How long you hold them
+## Strategy
+
+### Offense
+
+- **Target weak territories** — Low defender power = easy capture
+- **Check defender energy** — Tired defenders fight poorly
+- **Time your attacks** — Strike when owners are likely offline
+
+### Defense
+
+- **Assign strong soldiers** — High power deters attackers
+- **Keep energy high** — Rotate tired defenders
+- **Prioritize high-value** — Defend Epic/Rare over Common
+
+### Expansion vs Consolidation
+
+| Strategy | Pros | Cons |
+|----------|------|------|
+| **Many territories** | More total income | Harder to defend all |
+| **Few territories** | Easier to defend | Lower total income |
 
 <Tip>
-Balance expansion with defense. Holding 3 territories you can defend beats holding 10 you can't.
+3 well-defended territories often outperforms 5 poorly-defended ones.
 </Tip>
-
-<Card title="Enter the Battlefield" icon="map" href="https://croarmy.site/battlefield">
-  View the live territory map →
-</Card>

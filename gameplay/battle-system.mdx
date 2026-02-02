@@ -1,140 +1,51 @@
 ---
 title: "Battle System"
-description: "Master the turn-based card combat system"
+description: "Master the 3v3 turn-based card combat"
 ---
 
 # Battle System
 
-Cronos Army features strategic turn-based combat where every decision matters.
+Cronos Army uses a **3v3 turn-based card battle** system. You pick 3 soldiers, the enemy has 3 soldiers, and you fight until one team is eliminated.
 
-## How Battles Work
+## How It Works
 
-When you enter a battle, your soldiers face the enemy team. Combat alternates until one side is eliminated.
+1. **Select 3 soldiers** from your army
+2. **Take turns** — you act, then one enemy responds
+3. **Choose actions** — Attack, Defensive, or Special
+4. **Last team standing wins**
 
-### The Combat Loop
-
-```
-Your Turn → Select Soldier → Choose Action → Pick Target → Attack Executes → Enemy Turn → Repeat
-```
-
-## Your Turn
-
-Each turn, you make three decisions:
-
-### 1. Select Your Soldier
-
-Choose which soldier acts this turn. Consider:
-- **Health** — Protect wounded soldiers
-- **Personality** — Match specials to the situation
-- **Energy** — All soldiers in battle fight at full power
-
-### 2. Choose Your Action
-
-<CardGroup cols={3}>
-  <Card title="Attack" icon="sword">
-    **Full damage**, no protection. Best for finishing enemies.
-  </Card>
-  <Card title="Defensive" icon="shield">
-    **Reduced damage** dealt and received. Good when low on health.
-  </Card>
-  <Card title="Special" icon="star">
-    **Unique ability** based on personality. Can turn the tide.
-  </Card>
-</CardGroup>
-
-### 3. Pick Your Target
-
-Select which enemy to attack. **Focus fire** — eliminating one enemy quickly is usually better than spreading damage.
-
-## Personality Specials
-
-Every soldier personality has a unique special ability:
-
-| Personality | Special Move | Effect |
-|-------------|--------------|--------|
-| **Aggressive** | Piercing Strike | Ignores 50% of enemy defense |
-| **Intelligent** | Analyze Weakness | +40% damage to target |
-| **Reckless** | All-In | 2x damage, take +50% damage next turn |
-| **Defensive** | Shield Wall | -60% damage taken this turn |
-| **Funny** | Distract | Enemy has 30% miss chance |
-| **Mysterious** | Shadow Step | 40% dodge chance next attack |
-| **Inspiring** | Rally | Heal all allies 15% |
-| **Stubborn** | Last Stand | Can't die this turn (min 1 HP) |
-
-<Tip>
-Learn when to use each special. A well-timed Shield Wall or Rally can save a losing battle.
-</Tip>
-
-## Enemy AI Behavior
-
-When defending, enemy soldiers respond based on their personalities:
-
-- **Aggressive** defenders hunt your weakest soldier
-- **Stubborn** defenders attack whoever hit them last
-- **Intelligent** defenders focus your biggest threat
-- **Defensive** defenders protect their wounded allies
-
-Understanding these patterns helps you predict enemy moves.
-
-## Winning Strategies
-
-<AccordionGroup>
-  <Accordion title="Focus Fire">
-    Concentrate attacks on one enemy. A dead enemy deals zero damage. Spreading damage lets everyone keep attacking you.
-  </Accordion>
-  <Accordion title="Protect Your Wounded">
-    Switch hurt soldiers to Defensive stance. Use Inspiring soldiers to Rally heal. Don't let enemies pick off your weak links.
-  </Accordion>
-  <Accordion title="Time Your Specials">
-    Don't spam specials randomly. Save Piercing Strike for high-defense enemies. Use Shield Wall when you're about to take a big hit.
-  </Accordion>
-  <Accordion title="Read the Enemy">
-    Watch enemy personalities. If they're all Aggressive, they'll swarm your weakest soldier — protect them or sacrifice them strategically.
-  </Accordion>
-</AccordionGroup>
+Each soldier has:
+- **Power** — Determines damage dealt
+- **HP** — Based on energy (0-100)
+- **Personality** — Determines their special ability
 
 ---
 
-## Card Battles (Siege Combat)
+## Actions
 
-When attacking or defending territories, combat uses the **card battle** system — a tactical showdown between soldier cards.
-
-### Card Battle Overview
-
-Each soldier becomes a **battle card** with:
-- **Health** — How much damage they can take
-- **Attack** — Base damage dealt
-- **Personality** — Determines their special ability
-- **Special Move** — One-time powerful ability (once per battle)
-
-### Siege Card Combat
-
-Territory sieges use card battles:
-
-1. **Attacker deploys** up to 3 soldier cards
-2. **Defender's cards** are already assigned to the territory
-3. **Turn-based combat** — each side picks actions
-4. **Last team standing wins**
-
-### Card Actions
-
-Each turn, pick an action for your active soldier:
+Each turn, pick one action for your active soldier:
 
 <CardGroup cols={3}>
   <Card title="Attack" icon="sword">
-    Deal **full damage** to target. No protection.
+    **Full damage** to target. No protection.
   </Card>
   <Card title="Defensive" icon="shield">
-    Deal **50% damage**, take **50% less** damage.
+    **50% damage** dealt, **50% less** damage taken.
   </Card>
   <Card title="Special" icon="star">
-    Unleash your **personality ability**. One use per battle.
+    **Unique ability** based on personality. One use per battle.
   </Card>
 </CardGroup>
 
-### Personality Special Moves
+<Warning>
+Your team only gets **ONE special** per battle — across all soldiers. Use it wisely.
+</Warning>
 
-Each personality has a unique game-changing ability:
+---
+
+## Personality Specials
+
+Every personality has a unique special ability. These can turn the tide of battle:
 
 | Personality | Special Name | Effect |
 |-------------|--------------|--------|
@@ -142,46 +53,83 @@ Each personality has a unique game-changing ability:
 | **Relaxed** | Second Wind | Heal 50% HP, immune to damage this round |
 | **Intelligent** | Exploit Weakness | 3x damage to lowest HP enemy |
 | **Mysterious** | Mind Control | Target attacks their own ally |
-| **Stubborn** | 💎 HODL | Reflect 50% damage back to attacker |
+| **Stubborn** | 💎 HODL | Reflect 50% damage back to attacker this round |
 | **Funny** | Wild Card | Random: heal all 50% OR 2x damage to all OR swap HP |
-| **Inspiring** | Rally Cry | Heal all allies 30%, boost their next attack |
-| **Reckless** | Blaze of Glory | Massive damage, but take 50% recoil |
-| **Zombie** | Undying | Survive fatal blow with 1 HP (once) |
+| **Inspiring** | Rally Cry | All allies heal 30%, +50% damage next turn |
+| **Reckless** | APE IN | 4x damage, but lose 75% of your HP |
+| **Zombie** | Brain Feast | 1.5x damage. If this kills, heal 50% HP |
 
-<Warning>
-Specials can only be used **once per battle**. Time them carefully — a wasted special can cost you the fight.
-</Warning>
-
-### Progressive Siege
-
-Territory sieges are **progressive** — damage carries over:
-
-1. **Each battle chips away** at defender/attacker health
-2. **Multiple attacks** may be needed to capture
-3. **Defenders can reinforce** between attacks
-4. **Territory falls** when all defenders are eliminated
-
-This creates strategic depth — do you go all-in or wear them down over time?
+<Tip>
+Build your team around complementary specials. An **Inspiring** soldier can set up a devastating **Aggressive** or **Intelligent** follow-up.
+</Tip>
 
 ---
 
-## Battle Types Summary
+## Damage Calculation
 
-| Type | Where | Format | Stakes |
-|------|-------|--------|--------|
-| **Quick Battle** | Battle Arena | 3v3 cards | WPP rewards |
-| **Territory Siege** | World Map | Progressive cards | Territory control |
-| **Defense** | Your territories | Automatic cards | Keep your land |
+Damage is based on the **power ratio** between attacker and defender:
+
+- **Base damage** = Attacker's power ÷ 10
+- **Power ratio modifier** = Attacker power ÷ Defender power (capped 0.5x to 1.5x)
+- **Stronger soldiers** deal more damage AND take less
+
+### Example
+
+A soldier with 200 power attacking one with 100 power:
+- Base: 200 ÷ 10 = 20 damage
+- Ratio: 200 ÷ 100 = 2.0 → capped to 1.5x
+- Final: 20 × 1.5 = **30 damage**
 
 ---
 
-## Battle Rewards
+## Battle Events
 
-| Outcome | WPP Earned |
-|---------|------------|
-| Participate | +5 |
-| Win | +20 bonus |
-| Capture territory | +10 bonus |
-| Defend territory | +10 bonus |
+Random events can modify damage during attacks:
 
-**Example:** Win an attacking siege = 5 + 20 + 10 = **35 WPP**
+| Event | Chance | Effect |
+|-------|--------|--------|
+| Solid Hit | Common | +25% damage |
+| Critical Strike | Uncommon | +50% damage |
+| Devastating Blow | Rare | +100% damage |
+| Glancing Blow | Common | -25% damage |
+| Fumble | Uncommon | -50% damage |
+| Complete Whiff | Rare | -80% damage |
+
+<Note>
+**Funny** soldiers have double the chance for battle events. High variance, high entertainment.
+</Note>
+
+---
+
+## Enemy AI Targeting
+
+When defending, enemy soldiers pick targets based on personality:
+
+| Personality | Targeting Logic |
+|-------------|-----------------|
+| **Aggressive** | Attacks your lowest HP soldier |
+| **Intelligent** | Attacks your highest power soldier |
+| **Stubborn** | Counter-attacks whoever hit them |
+| **Zombie** | Targets lowest HP (going for kills) |
+| **Others** | Random or first available |
+
+Understanding AI patterns helps you predict enemy moves and protect vulnerable soldiers.
+
+---
+
+## Winning Strategies
+
+<AccordionGroup>
+  <Accordion title="Focus Fire">
+    Concentrate attacks on one enemy. A dead soldier deals zero damage. Spreading damage lets everyone keep hitting you.
+  </Accordion>
+  <Accordion title="Protect Your Wounded">
+    Switch hurt soldiers to Defensive stance. Use Inspiring's Rally Cry to heal. Don't let enemies pick off weak links.
+  </Accordion>
+  <Accordion title="Time Your Special">
+    You only get ONE. Don't waste it early. Save it for when it matters — a clutch heal, a finishing blow, or turning a losing fight.
+  </Accordion>
+  <Accordion title="Build Synergies">
+    Team composition matters. Inspiring + Aggressive is a classic combo. Stubborn can bait attacks while others deal damage.
+  </Accordion>
+</AccordionGroup>

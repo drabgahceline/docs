@@ -52,7 +52,6 @@
               "gameplay/pvp",
               "gameplay/territories",
               "gameplay/conquest",
-              "gameplay/missions",
               "gameplay/bases",
               "gameplay/facilities",
               "gameplay/energy",
@@ -66,7 +65,6 @@
             "pages": [
               "army/soldiers",
               "army/gear",
-              "army/gear-system",
               "army/rarity-stats",
               "army/zombies",
               "army/ai-memory"

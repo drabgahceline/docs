@@ -1,66 +1,77 @@
 ---
-title: "Rarity & Stats"
-description: "How soldier rarity affects power and value"
+title: "Ranks & Power"
+description: "How soldier ranks determine power and scarcity"
 ---
 
-# Rarity & Stats
+# Ranks & Power
 
-Soldier rarity determines base power level. Higher rarity = stronger baseline stats.
+Every soldier NFT has a **rank** — a military designation that determines base power and scarcity. Higher ranks are strictly limited in supply.
 
-## Rarity Tiers
+## Rank Hierarchy
 
-| Rarity | Power Range | Drop Rate |
-|--------|-------------|-----------|
-| **Common** | 80-100 | 60% |
-| **Uncommon** | 100-130 | 25% |
-| **Rare** | 130-170 | 10% |
-| **Epic** | 170-220 | 4% |
-| **Legendary** | 220-300 | 1% |
+| Rank | Max Supply | Power Multiplier |
+|------|------------|------------------|
+| **Private** | 10,000 | 1.0x |
+| **Corporal** | 5,000 | 1.3x |
+| **Sergeant** | 2,500 | 1.6x |
+| **Captain** | 1,000 | 2.5x |
+| **Major** | 500 | 3.2x |
+| **Colonel** | 250 | 4.0x |
+| **General** | 100 | 5.0x |
+| **Legendary** | 40 | Special |
 
 <Note>
-Rarity affects base stats, but **strategy beats stats**. A well-played Common team can beat a poorly-played Legendary team.
+Colonel, General, and Legendary ranks are **sold out** — the only way to get them is secondary market.
 </Note>
 
-## Stats Explained
+## How Rank Affects Combat
 
-### Power
+Rank determines your soldier's **power multiplier** in battle:
 
-Your soldier's attack strength. Higher power = more damage dealt per hit.
+- **Base Power:** All soldiers start with 100 base power
+- **Rank Multiplier:** Applied to base power (e.g., Captain = 100 × 2.5 = 250 power)
+- **Battle Calculation:** Higher power = higher damage dealt
 
-### Health
+### Example
 
-How much damage your soldier can absorb before being eliminated. Higher health = more survivability, more turns to deal damage.
+A **Captain** (2.5x) fighting a **Private** (1.0x):
+- Captain effective power: 250
+- Private effective power: 100
+- Captain has significant advantage, but randomness and [personality specials](/army/personalities) can swing fights
 
-### Personality
+## Scarcity = Value
 
-Not a "stat" but equally important. Determines:
-- Special ability in combat
-- Dialogue and reactions
-- AI behavior when defending
+The rank system creates natural scarcity:
 
-## Rarity vs Strategy
+- **Lower ranks** (Private, Corporal): Accessible, good for building squads
+- **Mid ranks** (Sergeant, Captain): Balanced power and availability
+- **High ranks** (Major, Colonel): Rare, significant power advantage
+- **Top ranks** (General, Legendary): Extremely limited, collector items
 
-**Rarity matters, but it's not everything.**
+<Warning>
+Supply caps are enforced on-chain. Once a rank sells out, no more can ever be minted.
+</Warning>
+
+## Rank vs Strategy
+
+Rank matters, but it's not everything:
 
 <AccordionGroup>
-  <Accordion title="Team Composition > Individual Power">
-    A balanced team with synergizing personalities often outperforms a team of mismatched high-rarity soldiers.
+  <Accordion title="Numbers Beat Power">
+    Three Privates can overwhelm one Captain. Building a balanced squad matters.
   </Accordion>
-  <Accordion title="Specials Win Fights">
-    Knowing when to use Shield Wall, Rally, or Piercing Strike matters more than raw power numbers.
+  <Accordion title="Personalities Add Variables">
+    A well-timed Shield Wall or Rally can turn a losing fight. See [Personalities](/army/personalities).
   </Accordion>
-  <Accordion title="Experience Counts">
-    Understanding enemy AI patterns and timing your attacks well beats brute force.
+  <Accordion title="Territory Defense Bonus">
+    Defenders get bonuses based on territory tier. Your rank isn't the only factor.
   </Accordion>
 </AccordionGroup>
 
-## Building Your Collection
+## Checking Supply
 
-Start with what you have. As you play:
-- Earn rewards to acquire better soldiers
-- Learn which personalities fit your style
-- Build toward a balanced, synergized army
+Current supply for each rank is visible in the [Recruit](/gameplay/recruiting) section. Live data is pulled from the blockchain.
 
 <Tip>
-Don't chase rarity for its own sake. A Legendary soldier with a personality you never use is less valuable than an Uncommon that fits your strategy perfectly.
+Major is down to under 100 remaining. If you want higher ranks, the window is closing.
 </Tip>

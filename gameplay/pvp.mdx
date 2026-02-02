@@ -1,43 +1,35 @@
 ---
 title: "PvP Battles"
-description: "Attack deployed soldiers or deploy your own for passive income"
+description: "Attack or deploy soldiers for DP rewards"
 ---
 
 # PvP Battles
 
-PvP is where commanders compete for DP rewards and glory. Master both modes — Attack and Deploy — to maximize your daily earnings.
+PvP is where you compete for DP (Deployment Points) rewards. Two modes: **Attack** (active) and **Deploy** (passive).
 
-## Two Ways to Battle
+## Two Modes
 
 <CardGroup cols={2}>
   <Card title="Attack Mode" icon="sword">
-    **Active battles.** Hunt deployed soldiers or AI opponents. Win for big DP, lose for a small consolation.
+    **Active battles.** Hunt deployed soldiers or AI. Win big, risk energy.
   </Card>
   <Card title="Deploy Mode" icon="shield">
-    **Passive income.** Deploy your squad for 2-8 hours. Earn guaranteed DP even if defeated.
+    **Passive income.** Deploy your squad for guaranteed DP while AFK.
   </Card>
 </CardGroup>
 
+---
+
 ## Attack Mode
 
-Attack other players' deployed soldiers (or AI opponents when none are available).
+Attack other players' deployed soldiers (or AI if none available).
 
 ### How It Works
 
-<Steps>
-  <Step title="Find a Target">
-    Browse available opponents matched to your power tier
-  </Step>
-  <Step title="Select Your Squad">
-    Choose soldiers for battle (higher energy = stronger)
-  </Step>
-  <Step title="Battle">
-    Combat resolves based on soldier stats and gear
-  </Step>
-  <Step title="Collect Rewards">
-    Win or lose, you earn DP
-  </Step>
-</Steps>
+1. **Find a target** — Matchmaking finds opponents in your power tier
+2. **Select your squad** — Choose soldiers with enough energy
+3. **Battle** — 3v3 card combat determines the winner
+4. **Collect rewards** — Win or lose, you earn DP
 
 ### Rewards
 
@@ -48,10 +40,8 @@ Attack other players' deployed soldiers (or AI opponents when none are available
 
 ### Energy Cost
 
-- **Victory:** 20% of squad's average energy consumed
-- **Defeat:** 25% of squad's average energy consumed
-
-**Example:** Squad at 100% average energy loses = -25 energy per soldier
+- **Victory:** 20% of squad's average energy
+- **Defeat:** 25% of squad's average energy
 
 ### Power Tiers
 
@@ -59,22 +49,24 @@ Matchmaking groups players into 6 tiers:
 
 | Tier | Level |
 |------|-------|
-| Bronze | Lowest power |
+| Bronze | Lowest |
 | Silver | |
 | Gold | |
 | Platinum | |
 | Diamond | |
-| Champion | Highest power |
+| Champion | Highest |
 
-You'll face opponents within ±1 tier of your squad power.
+You face opponents within ±1 tier of your squad power.
 
 <Tip>
-Target opponents slightly weaker than your squad for a high (~80%) win rate. Consistent wins beat risky attacks.
+Target slightly weaker opponents for ~80% win rate. Consistent wins beat risky gambles.
 </Tip>
+
+---
 
 ## Deploy Mode
 
-Deploy your squad to earn passive rewards while you're away.
+Deploy soldiers to earn passive DP while you're away.
 
 ### Deployment Options
 
@@ -84,101 +76,63 @@ Deploy your squad to earn passive rewards while you're away.
 | 4 hours | 120 DP | 30 DP/hr |
 | 8 hours | 240 DP | 30 DP/hr |
 
-<Note>
-Longer deployments are more efficient. 8-hour deployments give the same DP/hour as 4-hour but require less attention.
-</Note>
-
 ### How It Works
 
-<Steps>
-  <Step title="Select Soldier">
-    Choose a soldier from your roster
-  </Step>
-  <Step title="Choose Duration">
-    Pick 2, 4, or 8 hours
-  </Step>
-  <Step title="Deploy">
-    Soldier becomes unavailable for the duration
-  </Step>
-  <Step title="Collect">
-    Get your DP when deployment ends (win or lose)
-  </Step>
-</Steps>
+1. **Select a soldier** from your roster
+2. **Choose duration** — 2, 4, or 8 hours
+3. **Deploy** — Soldier becomes unavailable
+4. **Collect** — Get DP when deployment ends
+
+<Note>
+8-hour deployments are most efficient. Perfect for overnight or during work.
+</Note>
 
 ### Defense Bonus
 
-If attackers target your deployed soldier and **lose**, you earn bonus DP:
-- **Base reward** + defense bonus
-- Stronger soldiers = better defense = more bonus DP
+If attackers target your deployed soldier and **lose**, you earn bonus DP on top of your base reward.
 
-## Strategy Guide
+---
+
+## Strategy
 
 ### When to Attack
 
-<CardGroup cols={2}>
-  <Card title="Active Play Sessions" icon="gamepad">
-    Attack during focused play time when you can monitor energy and target selection.
-  </Card>
-  <Card title="Peak Hours" icon="clock">
-    More players deploying = more targets available in your tier.
-  </Card>
-</CardGroup>
+- **Active play sessions** — When you can monitor energy
+- **Peak hours** — More players deploying = more targets
 
 ### When to Deploy
 
-<CardGroup cols={2}>
-  <Card title="Overnight" icon="moon">
-    8-hour deployments while you sleep = guaranteed morning DP.
-  </Card>
-  <Card title="Work/School" icon="briefcase">
-    Deploy before leaving for passive income while AFK.
-  </Card>
-</CardGroup>
+- **Overnight** — 8-hour deployment = guaranteed morning DP
+- **Work/School** — Passive income while AFK
 
 ### Energy Management
 
-| Soldier Energy | Recommendation |
-|---------------|----------------|
-| 80-100% | Attack or Deploy — full strength |
-| 50-79% | Deploy only — avoid attack losses |
-| 20-49% | Train — recover while gaining XP |
-| 0-19% | Rest — wait for energy recovery |
+| Energy Level | Recommendation |
+|--------------|----------------|
+| 80-100% | Attack or Deploy |
+| 50-79% | Deploy only |
+| 20-49% | Train to recover |
+| 0-19% | Wait for regen |
 
 <Warning>
-Attacking with low-energy soldiers dramatically reduces win rate. A 50% energy soldier fights at half power.
+Low-energy soldiers fight at reduced power. A 50% energy soldier is half as effective.
 </Warning>
 
-### Maximizing Daily DP
-
-A well-optimized rotation:
-
-1. **Morning:** Collect overnight deploy rewards. Attack with rested soldiers.
-2. **Midday:** Deploy recovering soldiers. Attack with fresh ones.
-3. **Evening:** Final attack push. Deploy before bed.
-4. **Night:** 8-hour deployment while sleeping.
-
-**Target:** 500-800 DP per day with consistent play.
+---
 
 ## FAQ
 
 <AccordionGroup>
-  <Accordion title="Can I cancel a deployment early?">
-    No. Deployments run until the timer expires or your soldier is defeated once. Plan carefully.
+  <Accordion title="Can I cancel a deployment?">
+    No. Deployments run until the timer expires. Plan carefully.
   </Accordion>
-  <Accordion title="Do I lose soldiers permanently if defeated?">
-    No. Defeated soldiers just need time to recover energy. No permanent losses.
+  <Accordion title="Do I lose soldiers if defeated?">
+    No. Defeated soldiers just need energy recovery. No permanent losses.
   </Accordion>
-  <Accordion title="Can I deploy and attack simultaneously?">
-    Yes! You can have soldiers deployed while other soldiers attack.
+  <Accordion title="Can I deploy and attack at the same time?">
+    Yes. Different soldiers can be deployed while others attack.
   </Accordion>
-  <Accordion title="What happens if no players are available to attack?">
-    AI opponents are always available. They pay 60 DP on victory (vs 80 DP for players).
-  </Accordion>
-  <Accordion title="How is matchmaking power calculated?">
-    Sum of all soldiers' base power determines your tier. Your effective power (with current energy) is used in actual battle.
+  <Accordion title="What if no players are available?">
+    AI opponents are always available. They pay 60 DP on victory instead of 80 DP.
   </Accordion>
 </AccordionGroup>
-
-<Card title="Enter PvP Battles" icon="swords" href="https://croarmy.site/command-center">
-  Start battling for DP rewards →
-</Card>

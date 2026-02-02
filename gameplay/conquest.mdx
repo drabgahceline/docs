@@ -1,215 +1,119 @@
 ---
 title: "Conquest"
-description: "Attack enemy territories to expand your control and earn rewards"
+description: "Attack and capture territories through card battles"
 ---
 
 # Conquest
 
-Conquest Mode is where commanders fight for territorial control. Capture enemy bases to earn prestige, resources, and leaderboard rankings.
+Conquest is how you capture territories. Attack enemy-held or neutral territories, win the card battle, and claim the land.
 
 ## How Conquest Works
 
 <Steps>
-  <Step title="Find a Target">
-    Open the Territory Map and identify enemy-controlled territories within attack range
+  <Step title="Select Target">
+    Open the Battlefield map and pick a territory to attack
   </Step>
-  <Step title="Scout (Optional)">
-    Spend energy to reveal enemy garrison strength and composition
+  <Step title="Check Defenders">
+    See the defender's soldiers and their power levels
   </Step>
-  <Step title="Launch Attack">
-    Select your attack squad and pay the energy cost
+  <Step title="Select Your Squad">
+    Choose 3 soldiers with at least 15% energy each
   </Step>
   <Step title="Battle">
-    Combat resolves against the defender's garrison
+    3v3 card combat against the defenders
   </Step>
   <Step title="Victory or Defeat">
-    Win: capture territory. Lose: retreat and recover.
+    Win = capture territory. Lose = nothing happens.
   </Step>
 </Steps>
 
-## Attack Range
+## Requirements
 
-You can attack any territory within **5 hexes** of any base you own.
+Before attacking, you need:
 
-| Your Base | Attack Range |
-|-----------|--------------|
-| Position (10, 10) | Can attack (10, 15), (15, 10), etc. |
-| Multiple bases | Attack from any of them |
-
-<Tip>
-Owning multiple territories expands your attack range dramatically. Strategic positioning matters.
-</Tip>
-
-## Scouting
-
-Before committing to an attack, scout the target.
-
-### Scout Mechanics
-
-| Factor | Details |
-|--------|---------|
-| **Energy cost** | 10 energy |
-| **Success rate** | 50% base + 5% per Comms Hub level |
-| **Info revealed** | Garrison composition, facility levels, recent battles |
-
-### When to Scout
-
-<CardGroup cols={2}>
-  <Card title="High-Value Targets" icon="gem">
-    Always scout before attacking strategic territories worth the investment.
-  </Card>
-  <Card title="Unknown Defenders" icon="question">
-    New enemies or territories you haven't attacked before.
-  </Card>
-</CardGroup>
+| Requirement | Details |
+|-------------|---------|
+| **3 soldiers** | Minimum squad size |
+| **15%+ energy each** | Low energy soldiers can't attack |
+| **CA tokens** | To stake on captured territory |
+| **Under territory limit** | Max 5 territories per wallet |
 
 <Warning>
-Failed scouts consume energy but reveal nothing. Higher Comms Hub levels reduce this risk.
+If you already own 5 territories, you must release one before attacking.
 </Warning>
 
-## Attack Costs
+## The Card Battle
 
-| Resource | Base Cost | With Barracks L10 |
-|----------|-----------|-------------------|
-| **Energy** | 40 | 20 |
+Territory conquest uses the same [3v3 card battle](/gameplay/battle-system) system:
 
-Your soldiers lose energy whether you win or lose. Plan your attacks carefully.
+- Select actions: Attack, Defensive, or Special
+- One team special per battle
+- Eliminate all defenders to win
 
-## Capture Rewards
+### Defender Advantage
 
-### On Victory
+Defenders get bonuses based on territory tier:
 
-| Reward | Amount |
-|--------|--------|
-| **Territory ownership** | Full control |
-| **DP** | 150 |
-| **WPP** | +20 |
-| **Passive bonuses** | From territory multiplier |
+| Territory Tier | Defense Bonus |
+|----------------|---------------|
+| Common | +5% |
+| Rare | +10% |
+| Epic | +15% |
 
-### On Defeat
+This means attackers need slightly stronger squads to win reliably.
 
-| Outcome | Effect |
-|---------|--------|
-| **Energy loss** | Soldiers need recovery |
-| **Territory** | Stays with defender |
-| **DP** | None |
+## After Victory
 
-## Cooldowns
+When you capture a territory:
 
-After attacking a territory, you cannot attack **that same territory** again for:
+1. **3-hour protection** — No one can attack you immediately
+2. **Stake CA tokens** — Required to start earning CRO
+3. **Assign defenders** — Protect your new territory
+4. **Income starts** — Earn CRO every hour
 
-| Comms Hub Level | Cooldown |
-|-----------------|----------|
-| 0 | 24 hours |
-| 5 | 19 hours |
-| 10 | 14 hours (minimum) |
+## After Defeat
 
-**Important:** Cooldown is per-territory. You can attack multiple different territories without waiting.
+If you lose the attack:
+- Your soldiers lose energy (battle fatigue)
+- Territory stays with current owner
+- You can try again when soldiers recover
 
-## Defense
+---
 
-### Setting Up Defense
+## Neutral Territories
 
-Protect your territories by:
+Some territories have no owner (neutral). These are easier to capture:
+- No player defenders
+- May have AI defenders or none
+- Good targets for new players
+
+---
+
+## Strategy
+
+### Choosing Targets
 
 <CardGroup cols={2}>
-  <Card title="Garrison Soldiers" icon="shield">
-    Assign 3-5 soldiers to each base. They defend automatically when attacked.
+  <Card title="Check Power Levels" icon="eye">
+    Compare your squad power to defender power. Aim for 20%+ advantage.
   </Card>
-  <Card title="Upgrade Facilities" icon="building">
-    Higher facility levels = higher defense rating = deters attackers.
+  <Card title="Energy Matters" icon="battery-full">
+    Tired defenders fight poorly. Attack when defenders look low.
   </Card>
 </CardGroup>
 
-### Defense Rating
+### Squad Composition
 
-Attackers see your defense rating before attacking:
+- **Bring damage** — Aggressive, Intelligent, Reckless for kills
+- **Bring sustain** — Inspiring, Relaxed for longer fights
+- **Counter personalities** — If defenders are Aggressive, Stubborn reflects well
 
-```
-Defense Rating = (Garrison Power × 2) + Total Facility Levels
-```
+### Timing
 
-**Example:** 600 garrison power + 25 facility levels = 1,225 defense rating
+- **Off-peak hours** — Owners less likely to notice and reinforce
+- **After other battles** — Defenders might be recovering energy
+- **Coordinate with allies** — Multiple attackers can overwhelm a region
 
-High defense ratings deter casual attackers.
-
-### When Attacked
-
-If someone attacks your territory while you're offline:
-- Your garrison defends automatically
-- You'll see battle results when you log in
-- If you lose, you can immediately reclaim (no cooldown)
-
-## Reclamation
-
-Lost a territory? You can attack it immediately — no cooldown applies for reclaiming your own territories.
-
-<Note>
-Reclamation battles work like normal conquest. You still need enough energy and a strong squad.
-</Note>
-
-## Strategy Tips
-
-### Offensive Strategy
-
-<CardGroup cols={2}>
-  <Card title="Scout First" icon="binoculars">
-    Always scout targets worth 40+ energy investment.
-  </Card>
-  <Card title="Target Weak Neighbors" icon="crosshairs">
-    Look for low defense ratings and inactive players.
-  </Card>
-  <Card title="Chain Attacks" icon="link">
-    Own multiple territories to bypass single-target cooldowns.
-  </Card>
-  <Card title="Timing Matters" icon="clock">
-    Attack when garrisons are likely recovering from other battles.
-  </Card>
-</CardGroup>
-
-### Defensive Strategy
-
-<CardGroup cols={2}>
-  <Card title="Rotate Garrison" icon="arrows-rotate">
-    Swap in fresh soldiers after successful defenses.
-  </Card>
-  <Card title="Upgrade Evenly" icon="scale-balanced">
-    All facilities contribute to defense rating.
-  </Card>
-  <Card title="Strategic Positioning" icon="map">
-    Territories surrounded by allies are harder to attack.
-  </Card>
-  <Card title="Decoy Bases" icon="mask">
-    Garrison one base heavily, leave others light. Attackers waste energy on the strong one.
-  </Card>
-</CardGroup>
-
-### Advanced Tactics
-
-| Tactic | Description |
-|--------|-------------|
-| **Territory Flipping** | Trade territories with allies for mutual DP gains. Risky if others notice. |
-| **Siege Warfare** | Attack same territory repeatedly after cooldown. Forces defender to maintain strong garrison. |
-| **Expansion Waves** | Claim multiple adjacent territories in one day. Hard to defend but creates strategic blocks. |
-| **Feint Attacks** | Attack heavily defended base with weak squad (expected loss). Defender relaxes, then strike with elites. |
-
-## FAQ
-
-<AccordionGroup>
-  <Accordion title="Can I attack territories not adjacent to mine?">
-    Yes, as long as they're within 5 hexes of ANY of your bases. Adjacency not required.
-  </Accordion>
-  <Accordion title="What happens if I'm attacked while offline?">
-    Your garrison defends automatically. Check battle results when you log in.
-  </Accordion>
-  <Accordion title="Can multiple players attack my base simultaneously?">
-    No. Battles are queued. Second attacker waits for first battle to resolve.
-  </Accordion>
-  <Accordion title="Do conquered territories keep their facility upgrades?">
-    No. Facilities reset to Level 0 when ownership changes. You must rebuild.
-  </Accordion>
-</AccordionGroup>
-
-<Card title="View Territory Map" icon="map" href="https://croarmy.site/battlefield">
-  Scout and attack enemy territories →
-</Card>
+<Tip>
+Epic territories are heavily defended. Start with Common/Rare to build experience.
+</Tip>
