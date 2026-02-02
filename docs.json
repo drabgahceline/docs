@@ -7,12 +7,26 @@
     "light": "#ef4444",
     "dark": "#b91c1c"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "https://www.croarmy.site/assets/logo_no_bg.png",
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
   },
   "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Play Now",
+          "icon": "gamepad",
+          "href": "https://cronos.army"
+        },
+        {
+          "anchor": "Discord",
+          "icon": "discord",
+          "href": "https://discord.gg/EGKkyfEaaD"
+        }
+      ]
+    },
     "tabs": [
       {
         "tab": "Docs",
@@ -81,21 +95,7 @@
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Play Now",
-          "href": "https://cronos.army",
-          "icon": "gamepad"
-        },
-        {
-          "anchor": "Discord",
-          "href": "https://discord.gg/cronosarmy",
-          "icon": "discord"
-        }
-      ]
-    }
+    ]
   },
   "navbar": {
     "primary": {
