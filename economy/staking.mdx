@@ -1,175 +1,172 @@
 ---
 title: "Staking"
-description: "Stake CA tokens on territories to earn passive CRO income"
+description: "Stake CA tokens to defend territories and earn passive CRO"
 ---
 
 # Staking
 
-Stake CA tokens on your territories to unlock passive CRO income. The more you stake, the more you earn.
+Stake CA tokens to strengthen your territory defenses. Staking is a two-step process: first stake your CA, then assign it to territories.
 
 ## How Staking Works
 
 <Steps>
-  <Step title="Own a Territory">
-    You need to control a territory through conquest or minting
-  </Step>
   <Step title="Stake CA Tokens">
-    Deposit CA tokens on your territory
+    Deposit CA tokens into the staking contract (global pool)
   </Step>
-  <Step title="Earn CRO">
-    Receive CRO rewards based on your stake and territory value
+  <Step title="Assign to Territories">
+    Allocate your staked CA to specific territories you own
   </Step>
-  <Step title="Compound or Withdraw">
-    Reinvest earnings or withdraw to your wallet
+  <Step title="Defend & Earn">
+    Higher stake = stronger defense. Territory owners earn CRO daily.
+  </Step>
+  <Step title="Claim Rewards">
+    Earnings are calculated daily. Withdraw anytime.
   </Step>
 </Steps>
 
-## Staking Benefits
+## Two Interfaces
 
-<CardGroup cols={2}>
-  <Card title="Passive Income" icon="coins">
-    Earn CRO every hour without active play
-  </Card>
-  <Card title="Territory Value" icon="chart-line">
-    Staked territories contribute to your overall presence
-  </Card>
-  <Card title="Flexible" icon="arrows-rotate">
-    Unstake anytime (subject to cooldown periods)
-  </Card>
-  <Card title="Compound" icon="layer-group">
-    Reinvest earnings to accelerate growth
-  </Card>
-</CardGroup>
+Staking uses two separate UIs:
 
-## Staking Mechanics
+| Interface | Purpose |
+|-----------|---------|
+| **Staking Panel** | Stake/unstake CA tokens globally |
+| **Territory Manager** | Assign staked CA to your territories |
 
-### Stake Calculation
+You must stake first, then allocate. Unallocated staked CA provides no benefit.
 
-Your hourly CRO earnings depend on:
+---
+
+## Stake Requirements by Territory
+
+Each territory type has a minimum stake requirement:
+
+| Territory Type | Min Stake | 2x Defense | 3x Defense | 4x Defense |
+|---------------|-----------|------------|------------|------------|
+| **Common** | Varies | 2× min | 3× min | 4× min |
+| **Rare** | Varies | 2× min | 3× min | 4× min |
+| **Epic** | Varies | 2× min | 3× min | 4× min |
+
+<Note>
+Each territory has its own stake requirement shown in the Territory Manager. Requirements scale with territory value.
+</Note>
+
+---
+
+## Defense Multipliers
+
+Higher stake = stronger defense in battles:
+
+| Stake Level | Defense Bonus |
+|-------------|---------------|
+| 1× (minimum) | No bonus |
+| 2× | +10% defense |
+| 3× | +20% defense |
+| 4× (max) | +35% defense |
+
+<Warning>
+Staking more CA does **not** increase your CRO earnings. It only increases your defense strength.
+</Warning>
+
+---
+
+## Earning CRO
+
+Territory owners earn CRO passively based on:
 
 | Factor | Impact |
 |--------|--------|
-| **CA Staked** | More stake = more earnings |
-| **Territory Value** | Strategic locations earn more |
-| **Total Pool** | Your share of global rewards |
+| **Territory type** | Epic > Rare > Common |
+| **Base reward** | Set per territory |
+| **Ownership** | You must control the territory |
 
-### Minimum Stakes
+<Info>
+Rewards are calculated and assigned **once per day**. You can claim them anytime from your rewards panel.
+</Info>
 
-| Territory Tier | Minimum Stake |
-|---------------|---------------|
-| Tier 1 | 10,000 CA |
-| Tier 2 | 25,000 CA |
-| Tier 3 | 50,000 CA |
-| Tier 4 | 100,000 CA |
-| Tier 5 | 200,000 CA |
+### Reward Rates (per hour)
+
+| Territory Type | Base Reward |
+|---------------|-------------|
+| Common | ~0.065 CRO |
+| Rare | ~0.21 CRO |
+| Epic | ~1.49 CRO |
+
+---
+
+## Staking & Unstaking
+
+### To Stake
+1. Go to **Staking Panel**
+2. Enter amount of CA to stake
+3. Confirm transaction
+4. Then go to **Territory Manager** to allocate
+
+### To Unstake
+1. Go to **Staking Panel**
+2. Enter amount to unstake
+3. Confirm transaction
+4. Tokens return to your wallet
+
+<Tip>
+**No cooldown period.** You can unstake anytime. However, unstaking removes your territory allocations and those territories will stop earning.
+</Tip>
+
+---
+
+## What Happens If You Lose a Territory?
+
+If an attacker captures your territory:
+- Your staked CA remains yours (stays in staking contract)
+- That territory **stops earning** for you
+- You don't lose any accumulated rewards
+- You can reallocate your stake to other territories
 
 <Note>
-Higher tier territories can hold more stake and generate proportionally more income.
+You never lose staked CA or accumulated rewards. Losing a territory just means you stop earning from it until you reclaim or capture another.
 </Note>
 
-## How to Stake
+---
 
-<Steps>
-  <Step title="Navigate to Territory">
-    Select a territory you own from the Command Center
-  </Step>
-  <Step title="Click Stake">
-    Open the staking panel for that territory
-  </Step>
-  <Step title="Enter Amount">
-    Choose how many CA tokens to stake
-  </Step>
-  <Step title="Confirm Transaction">
-    Approve the on-chain transaction
-  </Step>
-</Steps>
-
-## Managing Your Stake
-
-### Adding More Stake
-
-You can add to your stake at any time:
-- Select the territory
-- Click "Add Stake"
-- Enter additional amount
-- Confirm transaction
-
-New stake starts earning immediately.
-
-### Removing Stake
-
-To unstake CA tokens:
-
-1. Select the territory
-2. Click "Unstake"
-3. Enter amount to withdraw
-4. Wait for cooldown period
-5. Claim tokens
-
-<Warning>
-Unstaking has a **72-hour cooldown** before tokens are available to withdraw. Plan accordingly.
-</Warning>
-
-## Staking Strategy
-
-### Maximize Returns
+## Strategy Tips
 
 <CardGroup cols={2}>
-  <Card title="Focus on High-Value Territories" icon="star">
-    Strategic locations earn more per staked CA. Prioritize quality.
+  <Card title="Match Stake to Value" icon="scale-balanced">
+    Put more stake on valuable territories worth defending.
   </Card>
-  <Card title="Defend Your Stake" icon="shield">
-    Lost territories mean lost stake earnings. Keep strong garrisons.
+  <Card title="Defense vs Earnings" icon="shield">
+    Higher stake = better defense, not more earnings. Stake to deter attackers.
   </Card>
-  <Card title="Compound Earnings" icon="arrows-rotate">
-    Reinvest CRO rewards to accelerate growth.
+  <Card title="Keep Some Liquid" icon="water">
+    Don't stake everything. Keep CA liquid for new territory opportunities.
   </Card>
-  <Card title="Spread Risk" icon="puzzle-piece">
-    Stake across multiple territories to reduce single-point-of-failure risk.
+  <Card title="Claim Regularly" icon="hand-holding-dollar">
+    Rewards don't auto-compound. Claim and reinvest manually if desired.
   </Card>
 </CardGroup>
 
-### Stake Distribution
-
-| Strategy | Best For |
-|----------|----------|
-| **Concentrated** | High-value territories you can defend |
-| **Distributed** | Lower risk, lower individual returns |
-| **Tiered** | Most stake on best territories, some on backup |
-
-## Staking vs. Holding
-
-| Factor | Staked CA | Unstaked CA |
-|--------|-----------|-------------|
-| Earning CRO | ✅ Yes | ❌ No |
-| Liquidity | 72h cooldown | Immediate |
-| Risk | Territory loss | None |
-| Growth | Compound earnings | Price only |
-
-<Tip>
-Stake CA you don't need short-term. Keep some liquid for opportunities like new territory mints or market purchases.
-</Tip>
+---
 
 ## FAQ
 
 <AccordionGroup>
-  <Accordion title="What happens if I lose a territory with staked CA?">
-    Your staked CA remains yours, but earnings stop until you reclaim the territory or stake elsewhere.
+  <Accordion title="Does more staking mean more rewards?">
+    No. Staking increases your defense strength, not your CRO earnings. Earnings depend on territory type and ownership.
+  </Accordion>
+  <Accordion title="Is there an unstaking cooldown?">
+    No cooldown. You can unstake anytime. However, if you have territories, they'll stop earning once stake is removed.
+  </Accordion>
+  <Accordion title="When do I receive rewards?">
+    Rewards are calculated daily. You can claim accumulated rewards anytime.
+  </Accordion>
+  <Accordion title="What's the minimum stake?">
+    Global minimum is 1,000 CA. Each territory has its own requirement shown in the Territory Manager.
   </Accordion>
   <Accordion title="Can I stake on multiple territories?">
-    Yes. You can stake on all territories you own. Each earns independently.
-  </Accordion>
-  <Accordion title="When do I receive earnings?">
-    Earnings accumulate hourly. Claim anytime from your territory panel.
-  </Accordion>
-  <Accordion title="Is there a maximum stake?">
-    No upper limit, but earnings scale with diminishing returns at very high amounts.
-  </Accordion>
-  <Accordion title="What's the APY?">
-    APY varies based on total staked across the network and CRO reward pool. Check current rates in-game.
+    Yes. Allocate your staked CA across any territories you own.
   </Accordion>
 </AccordionGroup>
 
 <Card title="Start Staking" icon="coins" href="https://croarmy.site/command-center">
-  Stake CA on your territories →
+  Stake CA and defend your territories →
 </Card>
