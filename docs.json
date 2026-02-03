@@ -7,10 +7,10 @@
     "light": "#ef4444",
     "dark": "#b91c1c"
   },
-  "favicon": "https://www.croarmy.site/assets/logo_no_bg.png",
+  "favicon": "/images/logo_no_bg.png",
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/images/logo_no_bg.png",
+    "dark": "/images/logo_no_bg.png"
   },
   "navigation": {
     "global": {
