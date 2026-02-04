@@ -40,7 +40,9 @@
               "getting-started/claim-soldiers",
               "getting-started/first-battle",
               "getting-started/multi-chain",
-              "getting-started/faq"
+              "getting-started/faq",
+              "getting-started/security",
+              "getting-started/community"
             ]
           },
           {
@@ -76,7 +78,6 @@
               "economy/credits",
               "economy/credit-shop",
               "economy/ca-token",
-              "economy/bundles",
               "economy/staking",
               "economy/wpp",
               "economy/rewards"
